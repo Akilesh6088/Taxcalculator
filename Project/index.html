@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    
+<div class="container">
+<h1>Tax Calculator</h1>
+<form id="taxForm">
+
+<div class="form-group">
+    <label for="grossIncome">Enter gross annual income <span class="tooltip-icon" data-tooltip="Enter the total gross annual income">?</span></label>
+    <div class="input-container">
+        <input type="" class="form-control" id="grossIncome" required placeholder="Enter gross annual income">
+        <div class="error-icon"></div>
+    </div></div>
+
+<div class="form-group">
+    <label for="extraIncome">Enter extra income <span class="tooltip-icon" data-tooltip="Enter any extra income from other sources">?</span></label>
+    <input type="" class="form-control" id="extraIncome" required placeholder="Enter extra income from other source">
+    <div class="error-icon"></div>
+</div>
+
+<div class="form-group">
+    <label for="age">Enter age group <span class="tooltip-icon" data-tooltip="Select your age group to calculate tax rates">?</span></label>
+    <select class="form-control" id="age" required>
+        <option value="<40">&lt;40</option>
+        <option value="≥ 40 &lt; 60">≥ 40 &lt; 60</option>
+        <option value="≥ 60">≥ 60</option>
+    </select>
+    <div class="error-icon"></div>
+</div>
+
+<div class="form-group">
+<label for="deductions">Enter total applicable deductions <span class="tooltip-icon" data-tooltip="Enter your total amount of applicable deductions">?</span></label>
+<input type="" class="form-control" id="deductions" required placeholder="Add total applicable deductions">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div id="errorIcon" class="error-icon"></div>
+</div>
+
+<div id="resultModal" class="modal">
+<div class="modal-content">
+<h2>Your overall income will be </h2>
+<div id="taxResult"></div>
+<button class="close">Close</button>
+
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
